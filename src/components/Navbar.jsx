@@ -15,8 +15,8 @@ const Navbar = () => {
         display: "flex",
         alignItems: "center",
         paddingY: "5px",
-        position: "relative",
-        // zIndex: 20,
+        position: "fixed",
+        zIndex: 10,
         background: "linear-gradient(180deg, black, #050816, #1d1836, black)",
       }}
     >
@@ -30,84 +30,98 @@ const Navbar = () => {
           margin: "0 auto",
         }}
       >
-        <Link
-          to="/"
-          style={{
-            display: "flex",
-            alignItems: "center",
-            gap: "2px",
-          }}
-          onClick={() => {
-            setActive("");
-            window.scrollTo(0, 0);
-          }}
-        >
-          <img
-            src={logo}
-            alt="logo"
+        <div>
+          <Link
+            to="/"
             style={{
-              width: "9rem",
-              height: "9rem",
-              objectFit: "contain",
-            }}
-          />
-          <p
-            style={{
-              color: "#f3f3f3",
-              fontSize: "18px",
-              fontWeight: "bold",
-              cursor: "pointer",
               display: "flex",
+              alignItems: "center",
+              gap: "16px",
+            }}
+            onClick={() => {
+              setActive("");
+              window.scrollTo(0, 0);
             }}
           >
-            Sumayukh Sinha &nbsp;
-            <span>| Portfolio</span>
-          </p>
-        </Link>
-        <ul
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            gap: "10px",
-          }}
-        >
-          {navLinks.map((item) => {
-            return (
-              <li
-                key={item.id}
-                onClick={() => {
-                  setActive(item.id);
-                  window.scrollTo({
-                    top: document.getElementById(item.id).offsetTop,
-                    behavior: "smooth",
-                  });
-                }}
-              >
-                <Link
-                  to={item.id}
-                  style={{
-                    color: active === item.id ? "#050816" : "#aaa6c3",
-                    fontSize: "18px",
-                    fontWeight: "500",
-                    cursor: "pointer",
-                  }}
-                  onMouseEnter={(e) => {
-                    e.target.style.color = "#f3f3f3";
-                  }}
-                  onMouseLeave={(e) => {
-                    e.target.style.color = "#aaa6c3"; // Reset the color to its default value
-                  }}
-                >
-                  {item.title}
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
+            <img
+              src={logo}
+              alt="logo"
+              style={{
+                width: "9rem",
+                height: "9rem",
+                objectFit: "contain",
+              }}
+            />
+            <p
+              style={{
+                color: "#f3f3f3",
+                fontSize: "18px",
+                fontWeight: "bold",
+                cursor: "pointer",
+                display: "flex",
+              }}
+            >
+              Sumayukh Sinha&nbsp;
+              <span>| Portfolio</span>
+            </p>
+          </Link>
+        </div>
         <div
           style={{
             display: "flex",
-            flex: "1",
+            justifyContent: "flex-start",
+          }}
+        >
+          <ul
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              gap: "40px",
+            }}
+          >
+            {navLinks.map((item) => {
+              return (
+                <li
+                  key={item.id}
+                  onClick={() => {
+                    setActive(item.id);
+                    const section = document
+                      .getElementById(item.id)
+                      .getBoundingClientRect();
+                    window.scrollTo({
+                      top: window.scrollY == 0 ? section.y : 0,
+                      behavior: "smooth",
+                    });
+                  }}
+                >
+                  <Link
+                    to={item.id}
+                    style={{
+                      color: active === item.id ? "#f3f3f3" : "#aaa6c3",
+                      fontSize: "18px",
+                      fontWeight: "500",
+                      cursor: "pointer",
+                    }}
+                    onMouseEnter={(e) => {
+                      e.target.style.color = "#f3f3f3";
+                    }}
+                    onMouseLeave={(e) => {
+                      e.target.style.color =
+                        active === item.id ? "#f3f3f3" : "#aaa6c3"; // Reset the color to its default value
+                    }}
+                  >
+                    {item.title}
+                  </Link>
+                  <span style={{ color: "#aaa6c3" }}>&nbsp;|&nbsp;</span>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+        <div
+          style={{
+            display: "flex",
+            // flex: "1",
             justifyContent: "flex-end",
             "@media (minWidth: 640px)": {
               display: "none",
@@ -165,15 +179,18 @@ const Navbar = () => {
                       onClick={() => {
                         setToggle(!toggle);
                         setActive(item.id);
+                        const section = document
+                          .getElementById(item.id)
+                          .getBoundingClientRect();
                         window.scrollTo({
-                          top: document.getElementById(item.id).offsetTop,
+                          top: window.scrollY == 0 ? section.y : 0,
                           behavior: "smooth",
                         });
                       }}
                     >
                       <Link
                         style={{
-                          color: active === item.id ? "#050816" : "#aaa6c3",
+                          color: active === item.id ? "#f3f3f3" : "#aaa6c3",
                           fontFamily: "'Poppins', 'sans-serif",
                           fontSize: "16px",
                           fontWeight: "500",
@@ -183,7 +200,8 @@ const Navbar = () => {
                           e.target.style.color = "#f3f3f3";
                         }}
                         onMouseLeave={(e) => {
-                          e.target.style.color = "#aaa6c3"; // Reset the color to its default value
+                          e.target.style.color =
+                            active === item.id ? "#f3f3f3" : "#aaa6c3"; // Reset the color to its default value
                         }}
                         to={item.id}
                       >

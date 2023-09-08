@@ -58,7 +58,7 @@ const Hero = () => {
             }}
           />
         </div> */}
-        <div>
+        <div style={{ marginTop: "24px" }}>
           <h1 className={styles.heroHeadText} style={{ color: "white" }}>
             Hi, I'm <span style={{ color: "#915eff" }}>Sumayukh</span>
           </h1>
