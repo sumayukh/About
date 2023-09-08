@@ -1,7 +1,8 @@
 import React from "react";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 import { ComputersCanvas } from "./canvas";
 import { styles } from "../style";
+import { overview } from "../constants";
 
 const Hero = () => {
   return (
@@ -68,11 +69,7 @@ const Hero = () => {
               color: "white",
             }}
           >
-            I possess a vast and versatile nature of skill set, which when
-            coupled with alacrity, helps me deliver results next to perfection
-            in any kind of role that I undertake. I'm a diligent developer who
-            believes in exhibiting a perfectly balanced blend of smartwork and
-            hardwork to add value in a team effort.
+            {overview.title}
           </p>
         </div>
       </div>

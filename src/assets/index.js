@@ -17,10 +17,12 @@ import mongodb from "./tech/mongodb.png";
 import nodejs from "./tech/nodejs.png";
 import reactjs from "./tech/reactjs.png";
 import redux from "./tech/redux.png";
+import chakra from "./tech/chakra.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
 
+import tuteck from "./company/tuteck.png";
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
@@ -49,9 +51,11 @@ export {
   nodejs,
   reactjs,
   redux,
+  chakra,
   tailwind,
   typescript,
   threejs,
+  tuteck,
   meta,
   shopify,
   starbucks,

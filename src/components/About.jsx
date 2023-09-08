@@ -73,7 +73,7 @@ const About = () => {
               // className="text-white text-[20px] font-bold text-center"
               style={{
                 color: "white",
-                fontSize: "20px",
+                fontSize: "16px",
                 fontWeight: "bold",
                 textAlign: "center",
               }}
