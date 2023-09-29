@@ -8,7 +8,6 @@ import {
   html,
   css,
   reactjs,
-  redux,
   chakra,
   tailwind,
   nodejs,
@@ -17,14 +16,11 @@ import {
   figma,
   docker,
   tuteck,
-  meta,
-  starbucks,
-  tesla,
-  shopify,
-  carrent,
+  ifrost,
   jobit,
-  tripguide,
+  soaim,
   threejs,
+  myLogo,
 } from "../assets";
 
 export const navLinks = [
@@ -206,48 +202,6 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Snippets Of An Idle Mind",
-    description:
-      "A collection of short stories and poems which highlight the essence of life.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "mongodb",
-        color: "green-text-gradient",
-      },
-      {
-        name: "tailwind",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: carrent,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Image Cropper",
-    description:
-      "Web application that enables users to upload images and resize them.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "restapi",
-        color: "green-text-gradient",
-      },
-      {
-        name: "scss",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: jobit,
-    source_code_link: "https://github.com/",
-  },
-  {
     name: "Data Profiling Dashboard",
     description:
       "A Chakra UI enhanced dashboard to display data-driven stats and insights",
@@ -265,8 +219,51 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+    image: ifrost,
+    source_code_link: "http://3.6.115.159",
+  },
+  {
+    name: "Snippets Of An Idle Mind",
+    description:
+      "A collection of short stories and poems which highlight the essence of life.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "mongodb",
+        color: "green-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: soaim,
+    source_code_link:
+      "https://play.google.com/store/books/details/Snippets_Of_an_Idle_Mind?id=up7EEAAAQBAJ&hl=en&gl=US",
+  },
+  {
+    name: "Image Cropper",
+    description:
+      "Web application for image upload and resizing. Work in progress.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "restapi",
+        color: "green-text-gradient",
+      },
+      {
+        name: "scss",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: myLogo,
+    source_code_link: "https://github.com/sumayukh/ImageCrop",
   },
 ];
 

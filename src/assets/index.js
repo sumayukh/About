@@ -28,9 +28,9 @@ import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
 
-import carrent from "./carrent.png";
+import ifrost from "./IFrost.png";
 import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
+import soaim from "./SOAIM.png";
 
 export {
   myLogo,
@@ -60,7 +60,7 @@ export {
   shopify,
   starbucks,
   tesla,
-  carrent,
+  ifrost,
   jobit,
-  tripguide,
+  soaim,
 };

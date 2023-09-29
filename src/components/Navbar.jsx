@@ -32,7 +32,7 @@ const Navbar = () => {
       >
         <div>
           <Link
-            to="/"
+            to="/Portfolio"
             style={{
               display: "flex",
               alignItems: "center",
@@ -95,7 +95,7 @@ const Navbar = () => {
                   }}
                 >
                   <Link
-                    to={item.id}
+                    to={`Portfolio/${item.id}`}
                     style={{
                       color: active === item.id ? "#f3f3f3" : "#aaa6c3",
                       fontSize: "18px",
@@ -203,7 +203,7 @@ const Navbar = () => {
                           e.target.style.color =
                             active === item.id ? "#f3f3f3" : "#aaa6c3"; // Reset the color to its default value
                         }}
-                        to={item.id}
+                        to={`Portfolio/${item.id}`}
                       >
                         {item.title}
                       </Link>
